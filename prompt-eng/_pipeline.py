@@ -163,12 +163,13 @@ if __name__ == "__main__":
     MESSAGE = "1 + 1"
     PROMPT = MESSAGE 
     payload = create_payload(
-                         target="open-webui",   
+                         target="ollama",
                          model="llama3.2:latest", 
                          prompt=PROMPT, 
-                         temperature=1.0, 
-                         num_ctx=5555555, 
-                         num_predict=1)
+                         temperature=1.0
+                         )
+    #               num_ctx=5555555,
+    #                     num_predict=1
 
     time, response = model_req(payload=payload)
     print(response)
